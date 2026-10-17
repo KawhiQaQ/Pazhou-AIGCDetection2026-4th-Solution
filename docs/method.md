@@ -35,7 +35,7 @@ $$
 外部语料包含人工文本、直接生成文本及机器改写文本。前两类目标分别为 0 与 1，改写文本相对其人工原文的目标为：
 
 $$
-y_{\mathrm{edit}}=1-\frac{\sum_{n=1}^{7}n\,
+y_{\mathrm{edit}}=1-\frac{\sum_{n=1}^{7}n\cdot
 \cos(c_n(x_{\mathrm{human}}),c_n(x_{\mathrm{rewrite}}))}{\sum_{n=1}^{7}n},
 $$
 
