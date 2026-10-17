@@ -1,0 +1,38 @@
+experiment: V66_pe_core_multidepth_residual_fold0
+seed: 20260806
+fold: 0
+
+model:
+  backbone: vit_pe_core_gigantic_patch14_448.fb
+  repository: timm/vit_pe_core_gigantic_patch14_448.fb
+  checkpoint: .cache/pe_core_g14/model.safetensors
+  checkpoint_sha256: a0a499d4a7c6d35bb5f11aa2b076eaacde06e66a08176eb3b3d362d80eb91bd8
+  layer_indices: [9, 19, 29, 39, 49]
+  projection_dim: 128
+  dropout: 0.2
+  base_head_checkpoint: outputs/V51_pe_core_aigi_breadth_linear/fold0/linear_head.pth
+  parent_residual_checkpoint: outputs/V54_pe_core_residual_mlp/fold0/residual_mlp.pth
+  parent_valid_predictions: outputs/V54_pe_core_residual_mlp/fold0/valid_predictions.csv
+  parent_hidden_dim: 256
+  parent_dropout: 0.2
+
+data:
+  image_dir: data/competition/image/data/image_sample_data
+  labels_csv: data/competition/image/image_sample_data.csv
+  folds_csv: data/folds/image_folds_v1.csv
+  external_dir: data/external
+  external_manifest_csv: data/external/aigi_v2_breadth_pairs_manifest.csv
+  competition_final_features: outputs/V51_pe_core_aigi_breadth_linear/features/competition_center_features.npz
+  external_final_features: outputs/V51_pe_core_aigi_breadth_linear/features/openfake_center_features.npz
+  multidepth_cache_dir: outputs/V66_pe_core_multidepth_residual/features
+  input_size: 448
+  batch_size: 2
+  workers: 4
+
+train:
+  epochs: 3
+  batch_size: 40
+  lr: 0.0003
+  weight_decay: 0.01
+
+output_dir: outputs/V66_pe_core_multidepth_residual/fold0

@@ -1,0 +1,23 @@
+experiment: V56_pe_core_openfake_residual_mlp_fold2
+seed: 20260806
+fold: 2
+
+model:
+  backbone: vit_pe_core_gigantic_patch14_448.fb
+  checkpoint_sha256: a0a499d4a7c6d35bb5f11aa2b076eaacde06e66a08176eb3b3d362d80eb91bd8
+  base_head_checkpoint: outputs/V47_pe_core_g14_linear/fold2/linear_head.pth
+  hidden_dim: 256
+  dropout: 0.2
+
+data:
+  folds_csv: data/folds/image_folds_v1.csv
+  competition_features: outputs/V47_pe_core_g14_linear/features/competition_center_features.npz
+  external_features: outputs/V47_pe_core_g14_linear/features/openfake_center_features.npz
+
+train:
+  epochs: 3
+  batch_size: 40
+  lr: 0.0003
+  weight_decay: 0.01
+
+output_dir: outputs/V56_pe_core_openfake_residual_mlp/fold2

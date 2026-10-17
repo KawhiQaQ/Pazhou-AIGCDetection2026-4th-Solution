@@ -1,0 +1,20 @@
+experiment: V90_image_weighted_rank_ensemble
+submission_example_csv: data/competition/image/image_submission_example.csv
+method: fixed hierarchical family-aware percentile-rank ensemble
+weights_source: V86 fixed 1/8 addition, then V60 and V58 fixed 10% sequential additions; no test-set weight fitting
+cv_folds: [0.9995, 0.9958415841584158, 0.9994]
+cv_mean_auc: 0.9982471947194719
+members:
+  - {name: V29, weight: 0.08859375, path: outputs/submissions/V29_clip_adapter_multidepth_patch_external_full_e7.csv}
+  - {name: V36, weight: 0.08859375, path: outputs/submissions/V36_clip_adapter_paired_grid_full_e7.csv}
+  - {name: V47, weight: 0.08859375, path: outputs/submissions/V47_pe_core_g14_linear_full_e100.csv}
+  - {name: V54, weight: 0.08859375, path: outputs/submissions/V54_pe_core_residual_mlp_full_e3.csv}
+  - {name: V56, weight: 0.08859375, path: outputs/submissions/V56_pe_core_openfake_residual_mlp_full_e3.csv}
+  - {name: V67, weight: 0.08859375, path: outputs/submissions/V67_pe_core_multidepth_classifier_full_e10.csv}
+  - {name: V71, weight: 0.08859375, path: outputs/submissions/V71_pe_core_multidepth_pairwise_full_e10.csv}
+  - {name: V76, weight: 0.044296875, path: outputs/submissions/V76_pe_spatial_multidepth_classifier_full_e10.csv}
+  - {name: V77, weight: 0.044296875, path: outputs/submissions/V77_pe_spatial_multidepth_pairwise_full_e10.csv}
+  - {name: V86, weight: 0.10125, path: outputs/submissions/V86_dual_pe_multidepth_fusion_full_e5.csv}
+  - {name: V60, weight: 0.09, path: outputs/submissions/V60_cross_backbone_residual_full_e3.csv}
+  - {name: V58, weight: 0.1, path: outputs/submissions/V58_pe_core_aigi_residual_mlp_seed2_full_e3.csv}
+output_csv: outputs/submissions/V90_image_weighted_rank_ensemble.csv

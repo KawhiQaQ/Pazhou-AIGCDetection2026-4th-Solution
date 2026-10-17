@@ -1,0 +1,23 @@
+experiment: V76_pe_spatial_multidepth_classifier_fold0
+seed: 20260806
+fold: 0
+
+model:
+  backbone: vit_pe_spatial_gigantic_patch14_448.fb
+  checkpoint_sha256: db69c2e41d38a72cf3f852707367934edbea3f47c3d8b07dc3e082b8caff8d8d
+  layer_indices: [9, 19, 29, 39, 49]
+  projection_dim: 128
+  dropout: 0.2
+
+data:
+  folds_csv: data/folds/image_folds_v1.csv
+  competition_multidepth_features: outputs/V76_pe_spatial_multidepth_classifier/features/competition_multidepth_statistics.npz
+  external_multidepth_features: outputs/V76_pe_spatial_multidepth_classifier/features/aigi_multidepth_statistics.npz
+
+train:
+  epochs: 10
+  batch_size: 40
+  lr: 0.0003
+  weight_decay: 0.01
+
+output_dir: outputs/V76_pe_spatial_multidepth_classifier/fold0

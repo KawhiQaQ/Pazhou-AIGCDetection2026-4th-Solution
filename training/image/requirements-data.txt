@@ -1,0 +1,8 @@
+# Dataset restoration / fold reconstruction only; visual training uses the runtime environment.
+huggingface_hub>=0.34
+pyarrow>=17
+Pillow>=10
+ImageHash>=4.3
+numpy==2.2.6
+pandas==2.3.3
+scikit-learn==1.9.0

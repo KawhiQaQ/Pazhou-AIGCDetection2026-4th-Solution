@@ -1,0 +1,48 @@
+experiment: V60_cross_backbone_residual_fold3
+seed: 20260806
+fold: 3
+clip:
+  backbone: ViT-L/14@336px
+  clip_cache: .cache/clip
+  checkpoint: outputs/V36_clip_adapter_paired_grid/pretrain/external_pretrain.pth
+  feature_blocks:
+  - 5
+  - 11
+  - 17
+  - 23
+  adapter_last_blocks: 8
+  adapter_dim: 64
+  adapter_dropout: 0.1
+  embedding_dim: 512
+  dropout: 0.2
+  input_size: 336
+  resize_size: 384
+  batch_size: 8
+  workers: 8
+pe_base:
+  linear_head_checkpoint: outputs/V51_pe_core_aigi_breadth_linear/fold3/linear_head.pth
+  residual_checkpoint: outputs/V54_pe_core_residual_mlp/fold3/residual_mlp.pth
+  reference_predictions: outputs/V54_pe_core_residual_mlp/fold3/valid_predictions.csv
+  hidden_dim: 256
+  dropout: 0.2
+  feature_caches:
+    competition: outputs/V51_pe_core_aigi_breadth_linear/features/competition_center_features.npz
+    aigi: outputs/V51_pe_core_aigi_breadth_linear/features/openfake_center_features.npz
+    openfake: outputs/V47_pe_core_g14_linear/features/openfake_center_features.npz
+data:
+  competition_dir: data/competition/image/data/image_sample_data
+  labels_csv: data/competition/image/image_sample_data.csv
+  folds_csv: data/folds/image_folds_v1.csv
+  external_root: data/external
+  external_manifests:
+    aigi: data/external/aigi_v2_breadth_pairs_manifest.csv
+    openfake: data/external/openfake_frontier_api_manifest.csv
+  clip_feature_cache_dir: outputs/V60_cross_backbone_residual/features
+train:
+  epochs: 3
+  batch_size: 40
+  hidden_dim: 256
+  dropout: 0.2
+  lr: 0.0003
+  weight_decay: 0.01
+output_dir: outputs/V60_cross_backbone_residual/fold3

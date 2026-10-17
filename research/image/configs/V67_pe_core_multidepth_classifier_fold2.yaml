@@ -1,0 +1,23 @@
+experiment: V67_pe_core_multidepth_classifier_fold2
+seed: 20260806
+fold: 2
+
+model:
+  backbone: vit_pe_core_gigantic_patch14_448.fb
+  checkpoint_sha256: a0a499d4a7c6d35bb5f11aa2b076eaacde06e66a08176eb3b3d362d80eb91bd8
+  layer_indices: [9, 19, 29, 39, 49]
+  projection_dim: 128
+  dropout: 0.2
+
+data:
+  folds_csv: data/folds/image_folds_v1.csv
+  competition_multidepth_features: outputs/V66_pe_core_multidepth_residual/features/competition_multidepth_statistics.npz
+  external_multidepth_features: outputs/V66_pe_core_multidepth_residual/features/aigi_multidepth_statistics.npz
+
+train:
+  epochs: 10
+  batch_size: 40
+  lr: 0.0003
+  weight_decay: 0.01
+
+output_dir: outputs/V67_pe_core_multidepth_classifier/fold2

@@ -1,0 +1,16 @@
+experiment: V56_pe_core_openfake_residual_mlp_full_e3
+seed: 20260806
+model:
+  encoder_sha256: a0a499d4a7c6d35bb5f11aa2b076eaacde06e66a08176eb3b3d362d80eb91bd8
+  base_head_checkpoint: outputs/V47_pe_core_g14_linear/full_e100/linear_head.pth
+  hidden_dim: 256
+  dropout: 0.2
+data:
+  competition_features: outputs/V47_pe_core_g14_linear/features/competition_center_features.npz
+  external_features: outputs/V47_pe_core_g14_linear/features/openfake_center_features.npz
+  test_features: outputs/V47_pe_core_g14_linear/features/test_center_features.npz
+  submission_example_csv: data/competition/image/image_submission_example.csv
+train: {epochs: 3, batch_size: 40, lr: 0.0003, weight_decay: 0.01}
+cv_reference: {folds: [0.9919, 0.9898019801980198, 0.9979], mean_auroc: 0.9932006600660066}
+output_dir: outputs/V56_pe_core_openfake_residual_mlp/full_e3
+submission_path: outputs/submissions/V56_pe_core_openfake_residual_mlp_full_e3.csv

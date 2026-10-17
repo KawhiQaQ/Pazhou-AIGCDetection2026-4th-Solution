@@ -1,0 +1,56 @@
+experiment: V31_clip_adapter_paired_external_full_e11
+seed: 20260806
+
+model:
+  architecture: clip_residual_adapter
+  backbone: ViT-L/14@336px
+  clip_cache: .cache/clip
+  feature_blocks: [5, 11, 17, 23]
+  adapter_last_blocks: 8
+  adapter_dim: 64
+  adapter_dropout: 0.1
+  hidden_dim: 512
+  dropout: 0.2
+  init_trainable_checkpoint: outputs/V31_clip_adapter_paired_external/pretrain/external_pretrain.pth
+
+data:
+  image_dir: data/competition/image/data/image_sample_data
+  labels_csv: data/competition/image/image_sample_data.csv
+  test_image_dir: data/competition/image/data/image_test
+  test_csv: data/competition/image/image_test.csv
+  submission_example_csv: data/competition/image/image_submission_example.csv
+  input_size: 336
+  resize_size: 384
+  train_batch_size: 8
+  valid_batch_size: 8
+  workers: 8
+  validation_crops: 10
+
+train:
+  schedule_epochs: 12
+  full_train_epochs: 11
+  head_lr: 0.0003
+  backbone_lr: 0.0001
+  weight_decay: 0.05
+  contrastive_weight: 0.0
+  warmup_epochs: 1
+  grad_clip_norm: 1.0
+
+augmentation:
+  jpeg_probability: 0.25
+  jpeg_quality_min: 65
+  jpeg_quality_max: 100
+  blur_probability: 0.15
+  blur_sigma_min: 0.1
+  blur_sigma_max: 1.5
+
+cv_reference:
+  folds:
+    - {fold: 0, best_epoch: 11, auroc: 0.99005}
+    - {fold: 1, best_epoch: 12, auroc: 0.9820792079207922}
+    - {fold: 2, best_epoch: 7, auroc: 0.9926}
+  mean_auroc: 0.9882430693069306
+  full_train_epoch_rule: median of fold best epochs
+
+output_dir: outputs/V31_clip_adapter_paired_external/full_e11
+submission_path: outputs/submissions/V31_clip_adapter_paired_external_full_e11.csv

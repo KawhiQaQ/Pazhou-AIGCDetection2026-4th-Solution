@@ -1,0 +1,16 @@
+experiment: V54_pe_core_residual_mlp_full_e3
+seed: 20260806
+model:
+  encoder_sha256: a0a499d4a7c6d35bb5f11aa2b076eaacde06e66a08176eb3b3d362d80eb91bd8
+  base_head_checkpoint: outputs/V51_pe_core_aigi_breadth_linear/full_e22/linear_head.pth
+  hidden_dim: 256
+  dropout: 0.2
+data:
+  competition_features: outputs/V51_pe_core_aigi_breadth_linear/features/competition_center_features.npz
+  external_features: outputs/V51_pe_core_aigi_breadth_linear/features/openfake_center_features.npz
+  test_features: outputs/V51_pe_core_aigi_breadth_linear/features/test_center_features.npz
+  submission_example_csv: data/competition/image/image_submission_example.csv
+train: {epochs: 3, batch_size: 40, lr: 0.0003, weight_decay: 0.01}
+cv_reference: {folds: [0.996, 0.9932673267326733, 0.9973], mean_auroc: 0.9955224422442245}
+output_dir: outputs/V54_pe_core_residual_mlp/full_e3
+submission_path: outputs/submissions/V54_pe_core_residual_mlp_full_e3.csv

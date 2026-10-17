@@ -1,0 +1,30 @@
+experiment: V86_dual_pe_multidepth_fusion_fold0
+seed: 20260806
+fold: 0
+
+model:
+  core_encoder_sha256: a0a499d4a7c6d35bb5f11aa2b076eaacde06e66a08176eb3b3d362d80eb91bd8
+  spatial_encoder_sha256: db69c2e41d38a72cf3f852707367934edbea3f47c3d8b07dc3e082b8caff8d8d
+  layer_indices: [9, 19, 29, 39, 49]
+  projection_dim: 128
+  parent_dropout: 0.2
+  hidden_dim: 128
+  dropout: 0.2
+  core_parent_checkpoint: outputs/V71_pe_core_multidepth_pairwise/fold0/multidepth_classifier.pth
+  spatial_parent_checkpoint: outputs/V77_pe_spatial_multidepth_pairwise/fold0/multidepth_classifier.pth
+
+data:
+  folds_csv: data/folds/image_folds_v1.csv
+  core_competition_features: outputs/V66_pe_core_multidepth_residual/features/competition_multidepth_statistics.npz
+  core_external_features: outputs/V66_pe_core_multidepth_residual/features/aigi_multidepth_statistics.npz
+  spatial_competition_features: outputs/V76_pe_spatial_multidepth_classifier/features/competition_multidepth_statistics.npz
+  spatial_external_features: outputs/V76_pe_spatial_multidepth_classifier/features/aigi_multidepth_statistics.npz
+
+train:
+  epochs: 5
+  batch_size: 64
+  lr: 0.0003
+  weight_decay: 0.01
+  ranking_weight: 1.0
+
+output_dir: outputs/V86_dual_pe_multidepth_fusion/fold0

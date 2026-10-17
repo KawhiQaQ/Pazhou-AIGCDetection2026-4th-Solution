@@ -1,0 +1,40 @@
+experiment: V21_clip_adapter_external_pretrain
+seed: 20260806
+
+model:
+  architecture: clip_residual_adapter
+  backbone: ViT-L/14@336px
+  clip_cache: .cache/clip
+  feature_blocks: [5, 11, 17, 23]
+  adapter_last_blocks: 8
+  adapter_dim: 64
+  adapter_dropout: 0.1
+  hidden_dim: 512
+  dropout: 0.2
+
+data:
+  transfer_dir: data/external/community_forensics_transfer_v1
+  manifest_csv: manifest.csv
+  input_size: 336
+  resize_size: 384
+  train_batch_size: 8
+  workers: 8
+
+train:
+  epochs: 2
+  head_lr: 0.0003
+  backbone_lr: 0.0001
+  weight_decay: 0.05
+  contrastive_weight: 0.0
+  warmup_epochs: 1
+  grad_clip_norm: 1.0
+
+augmentation:
+  jpeg_probability: 0.25
+  jpeg_quality_min: 65
+  jpeg_quality_max: 100
+  blur_probability: 0.15
+  blur_sigma_min: 0.1
+  blur_sigma_max: 1.5
+
+output_dir: outputs/V21_clip_adapter_external/pretrain

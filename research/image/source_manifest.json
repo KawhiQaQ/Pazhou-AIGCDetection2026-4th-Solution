@@ -1,0 +1,574 @@
+[
+  {
+    "path": "scripts/build_cross_backbone_residual_submission.py",
+    "sha256": "3e552d55e2634344fc597bc76b176bfcc9e3e1e9cb8033bf992d945110c8196d"
+  },
+  {
+    "path": "scripts/build_dual_pe_fusion_submission.py",
+    "sha256": "9602e297201ee9989f0b9223dbd7ffba31a21d8a66f190956a40282219c6a23e"
+  },
+  {
+    "path": "scripts/build_folds.py",
+    "sha256": "d32ddb9bf6536b35b18d4b26a5d7b97fcda93ea9eea1fa45fcf98fe2595d0022"
+  },
+  {
+    "path": "scripts/build_image_ensemble_submission.py",
+    "sha256": "2cf8d7491405564e81c210f3dcb09b06ff12c402c50051f926da25fae94a4215"
+  },
+  {
+    "path": "scripts/build_image_submission_v1.py",
+    "sha256": "dffe340ac069494c0bb0c1d02051610b0e14f244fcd3616d5bcde148aaa69f58"
+  },
+  {
+    "path": "scripts/build_pe_core_submission.py",
+    "sha256": "147904b8b20e6e02a46c95f65305942f6c1983d27e11206621be13471bb1434b"
+  },
+  {
+    "path": "scripts/build_pe_multidepth_submission.py",
+    "sha256": "dde52243cc89911013e155e10941819f73eb64450d419cfa8f4fa74f184e6abf"
+  },
+  {
+    "path": "scripts/build_pe_residual_submission.py",
+    "sha256": "1d04c8a1c4f7a9096a92b2bf8041be13a532da7df0bc28278dee36cb118476e7"
+  },
+  {
+    "path": "scripts/build_weighted_rank_submission.py",
+    "sha256": "1b0dce5f51146fad1d1b7619e221226d4675b78ac6de2e7bc626e71cc03a9f10"
+  },
+  {
+    "path": "scripts/evaluate_V109_multiscale_rbf.py",
+    "sha256": "77fba6f67e38af92a58336ddc560a5d8102531832c4bae48661b24ff24c77961"
+  },
+  {
+    "path": "scripts/evaluate_V111_rine_ldm_rbf.py",
+    "sha256": "30fcbf471ba90791652e2dbe76220def7196c9728b6da9d7cd0790e8ecd4d79e"
+  },
+  {
+    "path": "scripts/evaluate_V113_npr_rbf.py",
+    "sha256": "7776e815378e4d28951b8d89e97156accf8c1b6e84a85f691bb42768c1f0f8d8"
+  },
+  {
+    "path": "scripts/evaluate_V178_content_protocol_forensic_cascade.py",
+    "sha256": "2a9101e0dafcd11cb14b04cb88615e7a8ada49e7ccbbb6e6712a542f4aadc7f4"
+  },
+  {
+    "path": "scripts/evaluate_bombek_dual.py",
+    "sha256": "3b3f22045385b19fa066f6d72e23b54f055fcb955c5eba6241df37ef792bebaf"
+  },
+  {
+    "path": "scripts/extract_V178_test_forensics.py",
+    "sha256": "063c06b7835a41d8eebf8bf7f3c328dae581cba64579ede68968f1a88e41b8c0"
+  },
+  {
+    "path": "scripts/extract_face_crop_vit_features.py",
+    "sha256": "7f62105afa8f96465edf662504b80f1b4090f4819e5f4c97aef79bcb8bd57fc4"
+  },
+  {
+    "path": "scripts/extract_pe_core_grayscale_features.py",
+    "sha256": "e2ac4fdc955b377b581a615af7f913a81df26f9944adeb9da2cc8d515262ff60"
+  },
+  {
+    "path": "scripts/extract_pe_core_multiview_features.py",
+    "sha256": "607ef789cec5933db1cd0e963901658b2a046a04056b9352e3e1361c07addf38"
+  },
+  {
+    "path": "scripts/extract_pe_multidepth_test.py",
+    "sha256": "730caf8363d4d4edc9c0b645214d58cebfb20f744b8e566234cdddc51223edb0"
+  },
+  {
+    "path": "scripts/prepare_aigi_v2_breadth_pairs.py",
+    "sha256": "1da67f846a60719f0cdd804c894560f0303b9bbc2463bb726c8f8aaacf4430cf"
+  },
+  {
+    "path": "scripts/prepare_aigi_v2_dense_grid.py",
+    "sha256": "5d829914c2c6201c4190212623e6dd96319a5cf673f1c437b1e5a03aedddf506"
+  },
+  {
+    "path": "scripts/prepare_aigi_v2_paired_extension.py",
+    "sha256": "0b69ff2b700ac4fd78e6c1570523624ff850180174dc929a9db320b2ae5ef0d6"
+  },
+  {
+    "path": "scripts/prepare_aigi_v2_paired_real.py",
+    "sha256": "5f4263263ef4505d932adcd4ea8f6d8df1c3bbe654e47f66abba3e765dfc2a21"
+  },
+  {
+    "path": "scripts/prepare_aigi_v2_transfer.py",
+    "sha256": "b32ca8a382d1c011336ce09efb6de5a153512509ed9e81bf8ed8b94e77f28036"
+  },
+  {
+    "path": "scripts/prepare_openfake_frontier_api.py",
+    "sha256": "9074b47573becc370722969b03b9e2625d37b1cf7ffa144a172960255e053385"
+  },
+  {
+    "path": "scripts/pretrain_clip_adapter_external.py",
+    "sha256": "2bd65a9d581340a97de2940bd4d55a1e098bef9cc616893ae6653c6198d9b389"
+  },
+  {
+    "path": "scripts/pretrain_clip_adapter_paired.py",
+    "sha256": "9917c3e2e40a52c6d9bc9db16f8450b2119e3fc7e47a3706a9d36d2f01a6a457"
+  },
+  {
+    "path": "scripts/train_cross_backbone_residual.py",
+    "sha256": "c00d8d3a4fe4341a500c7b19a67e3d935d49f2d9e4ef30899176526543944332"
+  },
+  {
+    "path": "scripts/train_dual_pe_multidepth_fusion.py",
+    "sha256": "88cca56d556c0a3cf795b381ac0340e26a8972bc5ef7061515d2a38c54a85648"
+  },
+  {
+    "path": "scripts/train_image_v1.py",
+    "sha256": "3902d9ea07871f28879d358465328ecb93c52d8489850f45916a112340dc78fd"
+  },
+  {
+    "path": "scripts/train_infer_V178_full.py",
+    "sha256": "651090ee5a83b981b018cf718bb41d618be7b51ac2b0a424adc659e1e373303b"
+  },
+  {
+    "path": "scripts/train_pe_core_linear.py",
+    "sha256": "be3ca3fc0fe0711769e29f66c60e865be4fce6fa0533e3d5a15d9e8396e3e3d6"
+  },
+  {
+    "path": "scripts/train_pe_core_multidepth_classifier.py",
+    "sha256": "54e2197366b118cc5a5e38d1a6b4cc47d4814a41da6327c736e55df1fa609bcf"
+  },
+  {
+    "path": "scripts/train_pe_core_multidepth_residual.py",
+    "sha256": "2121751fddc7ccc41631626f1405c33fe518934820b37d9060826aafc4214978"
+  },
+  {
+    "path": "scripts/train_pe_core_residual_mlp.py",
+    "sha256": "cd3d92944cff67d7f9ab69a97a78da9ead4dbc4e88ab49f4678e99d18120c357"
+  },
+  {
+    "path": "src/aigc_detection/__init__.py",
+    "sha256": "57714eb36f58136961332140ef086216f95b8fa90ba82827b45b87fcc7f833f3"
+  },
+  {
+    "path": "src/aigc_detection/distillation.py",
+    "sha256": "d5684d64369360a78c2aac8f0d16156736a2f5a2ad6c12b82231aa23d90ecaa8"
+  },
+  {
+    "path": "src/aigc_detection/folds.py",
+    "sha256": "6baae48400131a89adabdb0693ee77282a06e53d609e536404523e25bc6303cd"
+  },
+  {
+    "path": "src/aigc_detection/image_v1.py",
+    "sha256": "42c28b88d486ea0b893fb2250d16c3e28e4f897e1bc870820cca76d16226ab54"
+  },
+  {
+    "path": "src/aigc_detection/metrics.py",
+    "sha256": "2e39dac0058115f90b2cd9bda6506cf7cf43def86606aa121d0c85e88db71f0d"
+  },
+  {
+    "path": "configs/PE_core_multidepth_test_extract.yaml",
+    "sha256": "2d3351fb65218fa708376aba4e5c11cbab7ac73788d2789a7908ca1d48e059e3"
+  },
+  {
+    "path": "configs/PE_spatial_multidepth_test_extract.yaml",
+    "sha256": "f23d9a9b80c976647fe8b7be965925fc38a32080f20e8ceb7b18781fb40cc205"
+  },
+  {
+    "path": "configs/V21_clip_adapter_external_fold0.yaml",
+    "sha256": "6f9acefdea96ea338652857e0d49985cea64556427c49bab458956f3b4c13f5e"
+  },
+  {
+    "path": "configs/V21_clip_adapter_external_fold1.yaml",
+    "sha256": "974665bb678bca8e5ebb838077db2f103ac99d047b6c32123663ef6a08329012"
+  },
+  {
+    "path": "configs/V21_clip_adapter_external_fold2.yaml",
+    "sha256": "54b0f85c5148d398f7d7d939963fa89b122662f09481c7b76366d319c98cbc94"
+  },
+  {
+    "path": "configs/V21_clip_adapter_external_pretrain.yaml",
+    "sha256": "2c14d02e0dfd5e0f582a5125755c3ecee590451c718175937836196e71e2af07"
+  },
+  {
+    "path": "configs/V28_clip_adapter_modern_external_fold0.yaml",
+    "sha256": "38b520ec7fc59472469bee321ed2eb04718a9558279bbd1fd87cfdc0237c39ce"
+  },
+  {
+    "path": "configs/V28_clip_adapter_modern_external_fold1.yaml",
+    "sha256": "da3f7a082ff0fb7371b278a7a435d4e25e937e2c9970d5afc36ea5bda44215e5"
+  },
+  {
+    "path": "configs/V28_clip_adapter_modern_external_fold2.yaml",
+    "sha256": "41859975284b999a2045cd2835314deed7a8077b922d3e0631e3ba534ec7ac80"
+  },
+  {
+    "path": "configs/V28_clip_adapter_modern_external_pretrain.yaml",
+    "sha256": "ae04327935151b00ba7b1068f35d7de2ef3fd27063b5400335e2a6c075220b09"
+  },
+  {
+    "path": "configs/V29_clip_adapter_multidepth_patch_external_fold0.yaml",
+    "sha256": "8057f7c166d84993313c1bf5d770bfe5e8e1ef7502e869ab7802501b82d6aa4f"
+  },
+  {
+    "path": "configs/V29_clip_adapter_multidepth_patch_external_fold1.yaml",
+    "sha256": "f86da716488cc6b0eedbfd394fefe4a3d314502a8969e39b90542b71a1d95005"
+  },
+  {
+    "path": "configs/V29_clip_adapter_multidepth_patch_external_fold2.yaml",
+    "sha256": "92a20208a6c5dfc91666fb0e5efb49a4edea12df422defbfdccd9a5816b0df4e"
+  },
+  {
+    "path": "configs/V29_clip_adapter_multidepth_patch_external_fold3.yaml",
+    "sha256": "5299804b7dac771f5edf918657759c93ad0ef256e5bced5de78120c14eeed9be"
+  },
+  {
+    "path": "configs/V29_clip_adapter_multidepth_patch_external_fold4.yaml",
+    "sha256": "c5f9ccb6a8ef375b1de90129efa6fd82c2004c00d32ddbc16673f98fc418d691"
+  },
+  {
+    "path": "configs/V29_clip_adapter_multidepth_patch_external_full_e7.yaml",
+    "sha256": "61f7251a80b442c9e51b7ab2a75226423b63bee0b8dbbc38fef86f53f7da4efb"
+  },
+  {
+    "path": "configs/V29_clip_adapter_multidepth_patch_external_pretrain.yaml",
+    "sha256": "e9d182eb050a7494b7803f0515d25ec64ea8d8025c86ef3dd8797c863816df2c"
+  },
+  {
+    "path": "configs/V31_clip_adapter_paired_external_fold0.yaml",
+    "sha256": "9c109a53bb33e0ad88822c8f0008c68ddd6e9b0f2797d5f27745aca1147c7d61"
+  },
+  {
+    "path": "configs/V31_clip_adapter_paired_external_fold1.yaml",
+    "sha256": "8883a4e9bf44d8a73262c9266d5bb159e86caf2469eb75201a32f2fab403d81f"
+  },
+  {
+    "path": "configs/V31_clip_adapter_paired_external_fold2.yaml",
+    "sha256": "aa71f214d9aa3b4333702a9d96f314cf130358dddb46f592039a20642e58f4e7"
+  },
+  {
+    "path": "configs/V31_clip_adapter_paired_external_full_e11.yaml",
+    "sha256": "d76f2d0a989d623ab3233b05335832cafcf7bd964e35da9bdb4b9d3908c08506"
+  },
+  {
+    "path": "configs/V31_clip_adapter_paired_external_pretrain.yaml",
+    "sha256": "655d22d5249e0d8cf7655cc7dbfcb1b4cb73848cd70d5256452e257bbffe9830"
+  },
+  {
+    "path": "configs/V36_clip_adapter_paired_grid_fold0.yaml",
+    "sha256": "b23e89a666ed35b0dd4399a8f76998f621a77d13b857deb141cadbd22b4635a7"
+  },
+  {
+    "path": "configs/V36_clip_adapter_paired_grid_fold1.yaml",
+    "sha256": "f43474f63e380d9adc2fd9d2211b54e9648b932baa910d802e5eaeb59341bd09"
+  },
+  {
+    "path": "configs/V36_clip_adapter_paired_grid_fold2.yaml",
+    "sha256": "983535c9354469b3f2a8000f558bee3f7e6a16c08560e8fbf381cbec94a85d98"
+  },
+  {
+    "path": "configs/V36_clip_adapter_paired_grid_fold3.yaml",
+    "sha256": "0aa2b635b17aa65765d6952009b5a5742570b172056c231d6462e699ead1f36c"
+  },
+  {
+    "path": "configs/V36_clip_adapter_paired_grid_fold4.yaml",
+    "sha256": "2a2710f8acc373045a3432aee1f9b95a606d0955a56512dfe54f56e94965ef31"
+  },
+  {
+    "path": "configs/V36_clip_adapter_paired_grid_full_e7.yaml",
+    "sha256": "097a02b2b395c5186213d422746528869ad7794f7e001d26da3ff50ff23d18f9"
+  },
+  {
+    "path": "configs/V36_clip_adapter_paired_grid_pretrain.yaml",
+    "sha256": "bb1711bd7c936115f8ebc9021a464ed57b427bcb85b3c027e6aca846813207a6"
+  },
+  {
+    "path": "configs/V47_pe_core_g14_linear_fold0.yaml",
+    "sha256": "e118bdc74fc171fc8993bab166ceb3b544942eeccaa3719ebf65e9689e3af22a"
+  },
+  {
+    "path": "configs/V47_pe_core_g14_linear_fold1.yaml",
+    "sha256": "57f09e9f6f1d69331bc853edd34ebec54683f02b07a89bc84fabbf5484d5c36b"
+  },
+  {
+    "path": "configs/V47_pe_core_g14_linear_fold2.yaml",
+    "sha256": "c07c194da68a7cdbd9ab7b5717bf3bc4a141fdc0e5fdec54b6eb0066046d2b73"
+  },
+  {
+    "path": "configs/V47_pe_core_g14_linear_fold3.yaml",
+    "sha256": "76aa7676c5d299809df98fae10ce3b0975272e097a7a4cfcc0b2eacfa197efeb"
+  },
+  {
+    "path": "configs/V47_pe_core_g14_linear_fold4.yaml",
+    "sha256": "83ef1d70648da23b76d8d2f324c1657bb88a84e2f9b5eea7e2e7d4a3e49c43bb"
+  },
+  {
+    "path": "configs/V47_pe_core_g14_linear_full_e100.yaml",
+    "sha256": "dd96a048945f7b468d8f3f64e64b34a485705f8a658434ca53c993ba6dd21065"
+  },
+  {
+    "path": "configs/V50_pe_core_multiview_fold0.yaml",
+    "sha256": "f194fb8a4c8157ff2574ab1c46a34269e37413d87235e4a69fc37343cc640ad9"
+  },
+  {
+    "path": "configs/V51_pe_core_aigi_breadth_linear_fold0.yaml",
+    "sha256": "38f3d7ed9b9fdbad2332abf6afd2320561d940e9e2cd06eca111b547f8f2512d"
+  },
+  {
+    "path": "configs/V51_pe_core_aigi_breadth_linear_fold1.yaml",
+    "sha256": "7085cdd3a70ef987e0c33ddd21d9ff4f8b382b2e03226ebeef55b82f1f040567"
+  },
+  {
+    "path": "configs/V51_pe_core_aigi_breadth_linear_fold2.yaml",
+    "sha256": "0a7c82bf1b8b858c0a77addd8018a6808d6a1eee25e21f57d6e5247fb7baa007"
+  },
+  {
+    "path": "configs/V51_pe_core_aigi_breadth_linear_fold3.yaml",
+    "sha256": "708698503b9de5d103655dd355b576b268c646f1feb94e16c9d5920a3ccf8684"
+  },
+  {
+    "path": "configs/V51_pe_core_aigi_breadth_linear_fold4.yaml",
+    "sha256": "e5d7b7b7c06cd028e37098015bf7f09905e49dd2fbacb2d150bc0daf24ccf3ec"
+  },
+  {
+    "path": "configs/V51_pe_core_aigi_breadth_linear_full_e22.yaml",
+    "sha256": "657a86df63ded48f06028368d02691674622bd1ff6f2cd68e81ec60542c7df22"
+  },
+  {
+    "path": "configs/V54_pe_core_residual_mlp_fold0.yaml",
+    "sha256": "13c5f13551262516446e9bb4cae035fd80359a6fda2330fcce6ee8130ac68e9c"
+  },
+  {
+    "path": "configs/V54_pe_core_residual_mlp_fold1.yaml",
+    "sha256": "9ad392457344313b33ccb5322317012a11ea9d17594443b6507ea7c52aad53ee"
+  },
+  {
+    "path": "configs/V54_pe_core_residual_mlp_fold2.yaml",
+    "sha256": "25539bff469f9bec6fa677462e6d3e1626bed38a407241491c30f0a2ffddcffa"
+  },
+  {
+    "path": "configs/V54_pe_core_residual_mlp_fold3.yaml",
+    "sha256": "5b52159e614f2087cf702bec80a2949682db99b299685ad37078b77aaa675659"
+  },
+  {
+    "path": "configs/V54_pe_core_residual_mlp_fold4.yaml",
+    "sha256": "ac7190625c7f38248fc2e14fe6d341e4db5f3f30136dc2112ff7fe77043855f2"
+  },
+  {
+    "path": "configs/V54_pe_core_residual_mlp_full_e3.yaml",
+    "sha256": "2e2ea183db353854a5f877d47884321dfb0de44e1b8ef6da153900245f49b4d2"
+  },
+  {
+    "path": "configs/V56_pe_core_openfake_residual_mlp_fold0.yaml",
+    "sha256": "399683534a069808ab6ccd29fc7930eb1e6d1bc3bf178fa211fad1c2655d3528"
+  },
+  {
+    "path": "configs/V56_pe_core_openfake_residual_mlp_fold1.yaml",
+    "sha256": "c0dc970375b0bc6d8e8f37fbf761c063ec30b639136ac447494867ffeff27b70"
+  },
+  {
+    "path": "configs/V56_pe_core_openfake_residual_mlp_fold2.yaml",
+    "sha256": "ef036399d83e5b314f944ef4e8f9caae4e3e38ee4d3d271505c95cebc5979922"
+  },
+  {
+    "path": "configs/V56_pe_core_openfake_residual_mlp_fold3.yaml",
+    "sha256": "075bd6d4e3909f758e6abae7be6bed84636fd5aeee23bdceaf92aa390414b1dc"
+  },
+  {
+    "path": "configs/V56_pe_core_openfake_residual_mlp_fold4.yaml",
+    "sha256": "73cf82d5257847686b99e3905c63fcdbe14595990ddfb70288112f7e4a7e2ba6"
+  },
+  {
+    "path": "configs/V56_pe_core_openfake_residual_mlp_full_e3.yaml",
+    "sha256": "c6190286654329705681214e843cc2601eb305743351a92fc684a17cf25b0f9a"
+  },
+  {
+    "path": "configs/V58_pe_core_aigi_residual_mlp_seed2_fold0.yaml",
+    "sha256": "d6bf5a2cedd178bcdf3b7fe8f788665c650ee460d9aca8696cdbee790a101043"
+  },
+  {
+    "path": "configs/V58_pe_core_aigi_residual_mlp_seed2_fold1.yaml",
+    "sha256": "708a02bf376d50326a14c6daff1e466d9123a7ede82aefd41ed68b780223692f"
+  },
+  {
+    "path": "configs/V58_pe_core_aigi_residual_mlp_seed2_fold2.yaml",
+    "sha256": "c314cc03909d34118ccde91969b6476e63e43552855d4525365a83979bafa304"
+  },
+  {
+    "path": "configs/V58_pe_core_aigi_residual_mlp_seed2_fold3.yaml",
+    "sha256": "eab6504b64c70a1deb99c4d64327d69081989d85b480414ee3df79a6d7693d65"
+  },
+  {
+    "path": "configs/V58_pe_core_aigi_residual_mlp_seed2_fold4.yaml",
+    "sha256": "42d1c9929a5c1b33e37c2c2ca748506e65cd51edba1171170feef0733eaf90e8"
+  },
+  {
+    "path": "configs/V58_pe_core_aigi_residual_mlp_seed2_full_e3.yaml",
+    "sha256": "5119c6542e09ddbcba2450511aa0833b25ceb2b068d54de08e588ca6633455ff"
+  },
+  {
+    "path": "configs/V60_cross_backbone_residual_fold0.yaml",
+    "sha256": "9e5f45445831d4a25362852f6dfe689d842056bdbd501506b9b796809829f70d"
+  },
+  {
+    "path": "configs/V60_cross_backbone_residual_fold1.yaml",
+    "sha256": "b9a02f2bb2da9e5042e8ab0efa647f506eb5d766de3e8c8d275e8719ef1276f6"
+  },
+  {
+    "path": "configs/V60_cross_backbone_residual_fold2.yaml",
+    "sha256": "b1cd885be2c2f8c47330c212336488b256f4945cdadca8a22970340d8891e175"
+  },
+  {
+    "path": "configs/V60_cross_backbone_residual_fold3.yaml",
+    "sha256": "e1d98863761325c0a62a36a5f6cae049061f887114d89a9cedc3d78ed44cba61"
+  },
+  {
+    "path": "configs/V60_cross_backbone_residual_fold4.yaml",
+    "sha256": "574fcffe99d4e3a3bb9a5c06b737cc61ec0f54add19fa33a92b6a932edace995"
+  },
+  {
+    "path": "configs/V60_cross_backbone_residual_full_e3.yaml",
+    "sha256": "8ac18fe6fa99b997ab310d84330a301ac74f9a8d07ac6281458f0c65ad8f71c2"
+  },
+  {
+    "path": "configs/V66_pe_core_multidepth_residual_fold0.yaml",
+    "sha256": "e7fe2dc50c0b7b97bd3b4c5456df515812ec7c837bee1d256f1188e994d2aca9"
+  },
+  {
+    "path": "configs/V67_pe_core_multidepth_classifier_fold0.yaml",
+    "sha256": "36b24aa14200aaadae03ebdab56f31f0eabd203882a0afd0c696cbbe77677fbe"
+  },
+  {
+    "path": "configs/V67_pe_core_multidepth_classifier_fold1.yaml",
+    "sha256": "ee8d49a9e0f7a1f02c07bb515ad18d05ed61ea1771b375cc94be2723d89d888f"
+  },
+  {
+    "path": "configs/V67_pe_core_multidepth_classifier_fold2.yaml",
+    "sha256": "609075d7bbc1ba7b4168f2e6e880dcab614f3df82e4e20de59b3aaef873ee596"
+  },
+  {
+    "path": "configs/V67_pe_core_multidepth_classifier_fold3.yaml",
+    "sha256": "2db0904d2110110f7be84e86b2da77980b340af5aa210f91350bf54ab13517c8"
+  },
+  {
+    "path": "configs/V67_pe_core_multidepth_classifier_fold4.yaml",
+    "sha256": "4862661bffbb9b816cf1e88fb1929e6d23b0a30755e9155330c6b026a84c936a"
+  },
+  {
+    "path": "configs/V67_pe_core_multidepth_classifier_full_e10.yaml",
+    "sha256": "70b80e1a7c83517611d1263e97e4967fc19242d4552d2fa669743c7176dd0232"
+  },
+  {
+    "path": "configs/V71_pe_core_multidepth_pairwise_fold0.yaml",
+    "sha256": "5aef43d1991bc57fb9f9c8c8642bebfcdd5ae648b1aa12b363a775374a47adca"
+  },
+  {
+    "path": "configs/V71_pe_core_multidepth_pairwise_fold1.yaml",
+    "sha256": "c6dfc57161fb0210fcb126da5e7b1b0f31bb8ec431dbaa281d39076843134f96"
+  },
+  {
+    "path": "configs/V71_pe_core_multidepth_pairwise_fold2.yaml",
+    "sha256": "f7632b37f2c00fc801b8ee0dc4f0898b0ee817254d07431b2f4639a14f48e3e0"
+  },
+  {
+    "path": "configs/V71_pe_core_multidepth_pairwise_fold3.yaml",
+    "sha256": "650457186d52915db8de8202717766d920f3cd9e0484c15d79fb17f70e4696e3"
+  },
+  {
+    "path": "configs/V71_pe_core_multidepth_pairwise_fold4.yaml",
+    "sha256": "d5fb5ad00432af14dfd991700623a213ebffbda6bd9d7c5888715d18e6160492"
+  },
+  {
+    "path": "configs/V71_pe_core_multidepth_pairwise_full_e10.yaml",
+    "sha256": "97495b428ea400c5c743fd65e6a24a58ca9f08d5f804bd6d0a2063cc0e700228"
+  },
+  {
+    "path": "configs/V76_pe_spatial_multidepth_classifier_fold0.yaml",
+    "sha256": "455ec22ddc16c0bd7ff98ed2a55afb6cf4cbec23bb8a9d80eb9e9239b127966c"
+  },
+  {
+    "path": "configs/V76_pe_spatial_multidepth_classifier_fold1.yaml",
+    "sha256": "b79a9e7f89c61d5191822be7469d58c35b0268708e36bad7ea313114e7d8bc0e"
+  },
+  {
+    "path": "configs/V76_pe_spatial_multidepth_classifier_fold2.yaml",
+    "sha256": "6305178336dd0fabd3bdf4a098592ae6426c7bbf81d1a44566716f2af9c27a4c"
+  },
+  {
+    "path": "configs/V76_pe_spatial_multidepth_classifier_fold3.yaml",
+    "sha256": "cb806c648436fc273d114714321dc9dce296e5025acfbb7c1d0b7c475bac87fd"
+  },
+  {
+    "path": "configs/V76_pe_spatial_multidepth_classifier_fold4.yaml",
+    "sha256": "14a26a6a55ddac17472069b4e2823612c92356f2a80cc6d61ecf63ae43f2c304"
+  },
+  {
+    "path": "configs/V76_pe_spatial_multidepth_classifier_full_e10.yaml",
+    "sha256": "1cb250dc5b4bf270bb8081db51e3086e462768539d85ac24013bddc5aad9c33a"
+  },
+  {
+    "path": "configs/V76_pe_spatial_multidepth_extract.yaml",
+    "sha256": "9f2657f84ade42dd5287507a3acba17a3c0c722ed4373d23aab255237cbdf28f"
+  },
+  {
+    "path": "configs/V77_pe_spatial_multidepth_pairwise_fold0.yaml",
+    "sha256": "718d83ce32203f10ba8387ced4a76e39ee99790b56f863bcaf9d6a7fea720056"
+  },
+  {
+    "path": "configs/V77_pe_spatial_multidepth_pairwise_fold1.yaml",
+    "sha256": "2d60fd146667884670ced21f50ac7779866689ecc097373e52830f78bde8abba"
+  },
+  {
+    "path": "configs/V77_pe_spatial_multidepth_pairwise_fold2.yaml",
+    "sha256": "0e2ec317a6a8fbe823f3b8ef42f32febef40bbdc8413ee2105df48cafbc82f62"
+  },
+  {
+    "path": "configs/V77_pe_spatial_multidepth_pairwise_fold3.yaml",
+    "sha256": "78dece6d127b71f23636fad7177f4f2c0f0a73afa4b013dc89f6c3e520d0e38d"
+  },
+  {
+    "path": "configs/V77_pe_spatial_multidepth_pairwise_fold4.yaml",
+    "sha256": "527ecb4a04afebb313a50c130b9b1a1d26e890afa83aeb40b02885366a6e8de1"
+  },
+  {
+    "path": "configs/V77_pe_spatial_multidepth_pairwise_full_e10.yaml",
+    "sha256": "248f0ae9537f9cb9a119fc2c1317a3702a225c23421c07a7fce367c15deb5335"
+  },
+  {
+    "path": "configs/V86_dual_pe_multidepth_fusion_fold0.yaml",
+    "sha256": "4ef86e4a7ec0a91a214d17d146cdef09008373eacc64f2c9a3e0bdd26706ff60"
+  },
+  {
+    "path": "configs/V86_dual_pe_multidepth_fusion_fold1.yaml",
+    "sha256": "788fc3778b911d44a0c351d72bc97a6e6fd07aee0c9827746e3482d53781cef9"
+  },
+  {
+    "path": "configs/V86_dual_pe_multidepth_fusion_fold2.yaml",
+    "sha256": "985d499d9cc2c1fc2cab29135148ecd24250d88b20474bfbeb86686b927548cb"
+  },
+  {
+    "path": "configs/V86_dual_pe_multidepth_fusion_fold3.yaml",
+    "sha256": "862da0106085c3c91314913af2b2f252188549fb8cc90606e128d64ce916c6ac"
+  },
+  {
+    "path": "configs/V86_dual_pe_multidepth_fusion_fold4.yaml",
+    "sha256": "660b0afa7c14856ba88fe6aaa14a8feae5bf012dc1f04e0e890ed8c75399640e"
+  },
+  {
+    "path": "configs/V86_dual_pe_multidepth_fusion_full_e5.yaml",
+    "sha256": "c1aa87cbe57e93166583a81591b4f2604bd50b1eb938e9823fdef75fd0d915cd"
+  },
+  {
+    "path": "configs/V90_image_weighted_rank_ensemble_full.yaml",
+    "sha256": "1086bfe96f97c289fe18a19a18dbbeadb46433bdca2141810cc3af203bebe341"
+  },
+  {
+    "path": "manifests/external_transfer_v6_manifest.csv",
+    "sha256": "b94a40784f7cf4d26e8950a4bfb2c9166542032dfaffa2efbeb5021ac07d95bc"
+  },
+  {
+    "path": "manifests/aigi_v2_breadth_pairs_manifest.csv",
+    "sha256": "f4d4c41b1cf79c2e314a87ff983a051bb9bcbfff796388a6d943dd182d801afa"
+  },
+  {
+    "path": "manifests/openfake_frontier_api_manifest.csv",
+    "sha256": "6ce10e81aac686186581cf99dd8602588a5f2f746e38b639aeed90c4afcbc1fd"
+  },
+  {
+    "path": "docker/v178_image/prepare_assets.py",
+    "sha256": "6578c470a523295d0c24d98655d25b52f9d23092753b15f04b2375132014a9ff"
+  }
+]

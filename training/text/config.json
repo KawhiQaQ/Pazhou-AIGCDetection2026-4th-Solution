@@ -1,0 +1,11 @@
+{
+  "model_dir": ".local/checkpoints/text/qwen2.5_1.5b_instruct",
+  "competition": ".local/legacy/data/competition/text/text_sample_data.csv",
+  "external": ".local/legacy/external_data/NLPCC2026-Task6/filtered_binary_train.jsonl",
+  "output": "runs/text_retrain",
+  "seed": 20260825,
+  "batch_size": 2,
+  "accumulation": 6,
+  "pretrain": {"epochs": 1, "max_length": 2048, "learning_rate": 0.00003},
+  "adapt": {"epochs": 1, "max_length": 1536, "learning_rate": 0.00001}
+}

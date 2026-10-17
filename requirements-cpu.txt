@@ -1,0 +1,7 @@
+# Matches the serialized sklearn models. Python 3.11+.
+numpy==2.2.6
+scipy==1.17.1
+scikit-learn==1.9.0
+joblib==1.5.3
+pandas==2.3.3
+pillow==11.3.0

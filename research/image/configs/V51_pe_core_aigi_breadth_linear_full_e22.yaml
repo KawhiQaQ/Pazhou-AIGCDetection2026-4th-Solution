@@ -1,0 +1,38 @@
+experiment: V51_pe_core_aigi_breadth_linear_full_e22
+seed: 20260806
+
+model:
+  backbone: vit_pe_core_gigantic_patch14_448.fb
+  repository: timm/vit_pe_core_gigantic_patch14_448.fb
+  checkpoint: .cache/pe_core_g14/model.safetensors
+  checkpoint_sha256: a0a499d4a7c6d35bb5f11aa2b076eaacde06e66a08176eb3b3d362d80eb91bd8
+
+data:
+  image_dir: data/competition/image/data/image_sample_data
+  labels_csv: data/competition/image/image_sample_data.csv
+  external_dir: data/external
+  external_manifest_csv: data/external/aigi_v2_breadth_pairs_manifest.csv
+  test_image_dir: data/competition/image/data/image_test
+  test_csv: data/competition/image/image_test.csv
+  submission_example_csv: data/competition/image/image_submission_example.csv
+  feature_cache_dir: outputs/V51_pe_core_aigi_breadth_linear/features
+  input_size: 448
+  batch_size: 1
+  workers: 4
+
+train:
+  epochs: 22
+  batch_size: 40
+  lr: 0.001
+  weight_decay: 0.01
+
+cv_reference:
+  folds:
+    - {fold: 0, auroc: 0.9878}
+    - {fold: 1, auroc: 0.9867326732673267}
+    - {fold: 2, auroc: 0.9903}
+  mean_auroc: 0.9882775577557756
+  full_train_epoch_rule: fixed 22-epoch protocol; validation never used for selection
+
+output_dir: outputs/V51_pe_core_aigi_breadth_linear/full_e22
+submission_path: outputs/submissions/V51_pe_core_aigi_breadth_linear_full_e22.csv

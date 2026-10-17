@@ -1,0 +1,28 @@
+experiment: V76_pe_spatial_multidepth_extract
+seed: 20260806
+fold: 0
+
+model:
+  backbone: vit_pe_spatial_gigantic_patch14_448.fb
+  repository: timm/vit_pe_spatial_gigantic_patch14_448.fb
+  checkpoint: .cache/pe_spatial_g14/model.safetensors
+  checkpoint_sha256: db69c2e41d38a72cf3f852707367934edbea3f47c3d8b07dc3e082b8caff8d8d
+  layer_indices: [9, 19, 29, 39, 49]
+  projection_dim: 128
+  dropout: 0.2
+
+data:
+  image_dir: data/competition/image/data/image_sample_data
+  labels_csv: data/competition/image/image_sample_data.csv
+  folds_csv: data/folds/image_folds_v1.csv
+  external_dir: data/external
+  external_manifest_csv: data/external/aigi_v2_breadth_pairs_manifest.csv
+  multidepth_cache_dir: outputs/V76_pe_spatial_multidepth_classifier/features
+  input_size: 448
+  batch_size: 2
+  workers: 4
+
+train:
+  lr: 0.0003
+
+output_dir: outputs/V76_pe_spatial_multidepth_classifier/extract

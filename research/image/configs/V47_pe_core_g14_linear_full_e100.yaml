@@ -1,0 +1,38 @@
+experiment: V47_pe_core_g14_linear_full_e100
+seed: 20260806
+
+model:
+  backbone: vit_pe_core_gigantic_patch14_448.fb
+  repository: timm/vit_pe_core_gigantic_patch14_448.fb
+  checkpoint: .cache/pe_core_g14/model.safetensors
+  checkpoint_sha256: a0a499d4a7c6d35bb5f11aa2b076eaacde06e66a08176eb3b3d362d80eb91bd8
+
+data:
+  image_dir: data/competition/image/data/image_sample_data
+  labels_csv: data/competition/image/image_sample_data.csv
+  external_dir: data/external
+  external_manifest_csv: data/external/openfake_frontier_api_manifest.csv
+  test_image_dir: data/competition/image/data/image_test
+  test_csv: data/competition/image/image_test.csv
+  submission_example_csv: data/competition/image/image_submission_example.csv
+  feature_cache_dir: outputs/V47_pe_core_g14_linear/features
+  input_size: 448
+  batch_size: 1
+  workers: 4
+
+train:
+  epochs: 100
+  batch_size: 40
+  lr: 0.001
+  weight_decay: 0.01
+
+cv_reference:
+  folds:
+    - {fold: 0, auroc: 0.9869}
+    - {fold: 1, auroc: 0.9882178217821782}
+    - {fold: 2, auroc: 0.995}
+  mean_auroc: 0.9900392739273927
+  full_train_epoch_rule: fixed protocol; validation never used for selection
+
+output_dir: outputs/V47_pe_core_g14_linear/full_e100
+submission_path: outputs/submissions/V47_pe_core_g14_linear_full_e100.csv
