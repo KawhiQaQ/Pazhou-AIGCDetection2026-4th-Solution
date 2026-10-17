@@ -64,7 +64,7 @@ data/competition/image/
 
 持有原始 ZIP 时可运行 `python tools/prepare_competition_data.py --archives /path/to/zips --output data/competition --include-test`。图像原始配方要求 1,000 张标注图像和 20,000 张无标签参考图像；更换规模时需调整数据检查与配方。
 
-**文本预处理：**下载固定版本，去重、排除参考文本重叠，并构造连续编辑目标。
+**文本预处理**：下载固定版本，去重、排除参考文本重叠，并构造连续编辑目标。
 
 ```bash
 python tools/fetch_text_data.py --output data/nlpcc/train_data.json
@@ -75,7 +75,7 @@ python training/text/prepare_data.py \
   --output data/nlpcc/filtered.jsonl
 ```
 
-**图像预处理：**先准备下节的视觉骨干，再恢复选样清单和训练工作目录。
+**图像预处理**：先准备下节的视觉骨干，再恢复选样清单和训练工作目录。
 
 ```bash
 python -m pip install -r training/image/requirements-data.txt
@@ -129,7 +129,7 @@ HTTP 服务：`dualtrace serve --track text --port 8080`，图像服务将 `text
 
 训练从公开预训练骨干开始，重新拟合适配器和检测头，不会覆盖保留的推理权重。
 
-**文本：**公共预适配后进行目标域鲁棒适配。
+**文本**：公共预适配后进行目标域鲁棒适配。
 
 | 参数 | 公共预适配 | 目标域适配 |
 |:--|:--|:--|
@@ -150,7 +150,7 @@ python training/text/predict.py --adapter runs/text_retrain/adapter \
 
 新 adapter 输出原始回归分数。用 `--save-calibration runs/text_ecdf.npz` 在参考集上生成新 CDF，再用 `--calibration runs/text_ecdf.npz` 对新输入评分；不要为新 adapter 沿用旧 CDF。默认部署读取前 2,048 tokens，训练推理工具另支持首/中/尾窗口均值。
 
-**图像：**按依赖顺序执行 CLIP 外部适配、PE 检测头训练、多视图提取与核分类器拟合。学习率、轮数和增强配置位于 `research/image/configs/`。
+**图像**：按依赖顺序执行 CLIP 外部适配、PE 检测头训练、多视图提取与核分类器拟合。学习率、轮数和增强配置位于 `research/image/configs/`。
 
 ```bash
 python training/image/train.py --plan

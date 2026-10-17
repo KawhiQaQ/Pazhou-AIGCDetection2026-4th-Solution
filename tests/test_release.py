@@ -63,6 +63,7 @@ class ReleaseTests(unittest.TestCase):
             content = path.read_text()
             self.assertIsNone(re.search(r'\bT?V\d+\b', content), path)
             self.assertNotIn('\\operatorname', content, path)
+            self.assertIsNone(re.search(r'：\*\*[\u4e00-\u9fff]', content), path)
             self.assertEqual(content.count('```') % 2, 0, path)
             for target in re.findall(r'\]\(([^)]+)\)', content):
                 if not target.startswith(('https://', 'http://', '#')):

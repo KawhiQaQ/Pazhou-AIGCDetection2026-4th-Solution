@@ -64,7 +64,7 @@ data/competition/image/
 
 For authorized original ZIPs, run `python tools/prepare_competition_data.py --archives /path/to/zips --output data/competition --include-test`. The image recipe expects 1,000 labeled images and 20,000 unlabeled reference images; adjust its data checks and configuration when changing these sizes.
 
-**Text:** download the pinned data, deduplicate, exclude reference overlaps and construct continuous editing targets.
+**Text**: download the pinned data, deduplicate, exclude reference overlaps and construct continuous editing targets.
 
 ```bash
 python tools/fetch_text_data.py --output data/nlpcc/train_data.json
@@ -75,7 +75,7 @@ python training/text/prepare_data.py \
   --output data/nlpcc/filtered.jsonl
 ```
 
-**Images:** prepare the visual backbones below, then restore selected samples and the training workspace.
+**Images**: prepare the visual backbones below, then restore selected samples and the training workspace.
 
 ```bash
 python -m pip install -r training/image/requirements-data.txt
@@ -129,7 +129,7 @@ Start HTTP serving with `dualtrace serve --track text --port 8080`, or replace `
 
 Training starts from public pretrained backbones and fits new adapters and detection heads without overwriting preserved inference checkpoints.
 
-**Text:** public preadaptation followed by robust target-domain adaptation.
+**Text**: public preadaptation followed by robust target-domain adaptation.
 
 | Parameter | Public preadaptation | Target-domain adaptation |
 |:--|:--|:--|
@@ -150,7 +150,7 @@ python training/text/predict.py --adapter runs/text_retrain/adapter \
 
 A fresh adapter produces raw regression scores. Add `--save-calibration runs/text_ecdf.npz` on reference content to create a matching CDF, then use `--calibration runs/text_ecdf.npz` for new inputs. Do not reuse an old CDF with a new adapter. Deployment uses the first 2,048 tokens; the training inference utility also supports head/middle/tail averaging.
 
-**Images:** the launcher orders CLIP external adaptation, PE readout training, multiview extraction and kernel-classifier fitting. Default learning rates, epochs and augmentations are in `research/image/configs/`.
+**Images**: the launcher orders CLIP external adaptation, PE readout training, multiview extraction and kernel-classifier fitting. Default learning rates, epochs and augmentations are in `research/image/configs/`.
 
 ```bash
 python training/image/train.py --plan
