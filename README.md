@@ -89,7 +89,17 @@ python training/image/fetch_data.py
 
 ### 3. 模型权重
 
-**完整检测权重的公开下载链接尚未发布。** 已有权重包的用户应保留内部文件名，放置为 `.local/checkpoints/image/` 和 `.local/checkpoints/text/`，随后运行 `python tools/verify_assets.py`。已有原始镜像归档时，可用 `python tools/restore_assets.py` 提取权重。
+[百度网盘下载完整权重](https://pan.baidu.com/s/10vGkafstmSP7hp8HHnp22Q?pwd=cjss) · 提取码：`cjss`（图像与文本，约 21.8 GB）。
+
+下载整个 `checkpoints/` 文件夹，保留所有文件名和子目录，将其放入项目根目录的 `.local/` 下：
+
+```text
+.local/checkpoints/
+├── image/
+└── text/
+```
+
+运行 `python tools/verify_assets.py` 校验完整性，然后按下一节直接推理，无需重新训练。若将文件夹放在其他位置，可使用 `dualtrace --checkpoints /path/to/checkpoints ...` 指定。
 
 仅下载公开骨干不能替代训练好的检测头。自行训练使用以下预训练模型：
 

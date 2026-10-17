@@ -89,7 +89,17 @@ The downloader checks selected image SHA-256 hashes and resumes existing downloa
 
 ### 3. Checkpoints
 
-**Public download links for complete trained detectors are not yet available.** If you already have the checkpoint bundle, preserve its internal filenames under `.local/checkpoints/image/` and `.local/checkpoints/text/`, then run `python tools/verify_assets.py`. Existing original image archives can be extracted with `python tools/restore_assets.py`.
+[Download complete checkpoints from Baidu Netdisk](https://pan.baidu.com/s/10vGkafstmSP7hp8HHnp22Q?pwd=cjss) · Access code: `cjss` (image and text models, approximately 21.8 GB).
+
+Download the entire `checkpoints/` folder, preserve all filenames and subdirectories, and place it under `.local/` in the repository root:
+
+```text
+.local/checkpoints/
+├── image/
+└── text/
+```
+
+Run `python tools/verify_assets.py` to verify integrity, then follow the inference instructions below; no retraining is needed. For another location, use `dualtrace --checkpoints /path/to/checkpoints ...`.
 
 Public backbones alone do not include our trained detection heads. Training uses:
 
