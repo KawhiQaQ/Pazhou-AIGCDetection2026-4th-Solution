@@ -62,6 +62,7 @@ class ReleaseTests(unittest.TestCase):
         for path in [ROOT / 'README.md', ROOT / 'README.en.md', ROOT / 'docs/method.md']:
             content = path.read_text()
             self.assertIsNone(re.search(r'\bT?V\d+\b', content), path)
+            self.assertNotIn('\\operatorname', content, path)
             self.assertEqual(content.count('```') % 2, 0, path)
             for target in re.findall(r'\]\(([^)]+)\)', content):
                 if not target.startswith(('https://', 'http://', '#')):

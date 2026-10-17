@@ -10,7 +10,8 @@ PE Core G/14 与 PE Spatial G/14 分别提取中心裁剪的多层 patch 表征�
 
 $$
 u_l=P_l([\mu(H_l);\sigma(H_l)]),\qquad
-z=\sum_l\operatorname{softmax}_l(g(u_l))u_l.
+a_l=\frac{e^{g(u_l)}}{\sum_j e^{g(u_j)}},\qquad
+z=\sum_l a_l u_l.
 $$
 
 双编码器融合头将两路向量、绝对差、逐元素积及 logit 差作为交互特征，以残差修正平均 logit。CLIP ViT-L/14@336px 在末八个 Transformer 块中加入瓶颈适配器，汇集四层 CLS 特征；局部分支进一步统计 patch 分数的均值、上下尾均值与标准差。
@@ -59,8 +60,7 @@ $$
 推理时，语言模型最多读取 2048 个 token；字符支路处理输入全文。分别以保存的参考分数排序数组定义经验分布映射 $F_Q,F_C$，最终计算：
 
 $$
-s(x)=\operatorname{clip}_{[0,1]}\!\left[
-\tfrac12 F_Q(f_\theta(x))+\tfrac12 F_C(r(x))\right].
+s(x)=\frac{1}{2}F_Q(f_\theta(x))+\frac{1}{2}F_C(r(x)).
 $$
 
 两路映射在部署时冻结，因此单条请求无需重新计算批内排序。输出用于生成倾向排序，不等同于经过概率校准的后验概率。
